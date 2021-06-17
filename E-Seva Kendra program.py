@@ -1,7 +1,5 @@
 from easygui import *
 import sys
-import Tkinter
-import tkMessageBox
 msgbox("Hello!")
 while 1:
  a = choicebox("Apply for","E-Seva Kendra",choices=["Passport","Aadhar Card"])
@@ -12,7 +10,6 @@ while 1:
   a3 = enterbox("City")
   a4 = enterbox("District")
   a5 = enterbox("State")
-  #a22= fileopenbox("upload your photo")
   a6 = choicebox("Gender",choices= ["Male","Female","Other"])
   a7 = choicebox("Are you married?","Marital status",choices = ["Yes","No"])
   a8 = enterbox("Enter Pan card number 'if available' or enter '-' if not available")
@@ -21,15 +18,12 @@ while 1:
   a11 = choicebox("Employment type",choices = ["Student","Business","Government sector","Employee","Housewife","none"])
   a12 = choicebox("Is either of your parent (In case of minor i.e age below 18) a government servant",choices = ["Yes","No"])
   a13 = choicebox("Education qualification",choices =["<10","Matric","10+2","10+2[+]Graduation","10+2[+]Graduation[+]Post Graduation","Diploma"])
-  #a14 = choicebox("Provide atleast one's details",choices = ["Father","Mother","Legal guardian"])
   a14 = choicebox("Is any of your family member serving in Indian armed forces",choices = ["Yes","No"])
   a15 = enterbox("Enter your relation with the person who was a freedom fighter if any")
   c1 = msgbox("I solemly swear that the above mentioned information is true. \n")
   c2 = msgbox("\t\t Yours faithfully, \n ______")
   from docx import Document
   document=Document()
-  #document.add_picture("a22")
-  #paragraph = document.add_paragraph('Lorem ipsum dolor sit amet.')
   document.save('Passport.docx')
   f = open('Passport.docx', 'rb')
   document = Document(f)
@@ -50,8 +44,6 @@ while 1:
   c = msgbox("I confirm that I have been residing in India for at least 182 days in the preceding 12 months & information (including biometrics) provided by me to the UIDAI is my own and is true, correct and accurate. I am aware that my information including biometrics  will be used for generation of Aadhaar and authentication. I understand that my identity  information (except core biometric) may be provided to an agency only with my consent  during authentication or as per the provisions of the Aadhaar Act. I have a right to access my  identity information (except core biometrics) following the procedure laid down by UIDAI.  Verifier’s Stamp and Signature: (Verifier must put his/her Name, if stamp is not available)  Applicant’s signature/Thumbprint  ---------------------------------------------------------------------------------------------------------------------------  ---------------------------------------------- To be filled by the Enrolment Agency only : Date & time  of Enrolment: ---------------------------------------------------- “(Note: Incase of minor, the signature  will be done by parent/guardian. Incase of incapacitated person, the signature will be done by Legal Guardian of Incapacitated Person)")
   from docx import Document
   document=Document()
-  #document.add_picture("a22")
-  #paragraph = document.add_paragraph('Lorem ipsum dolor sit amet.')
   document.save('Aadhar.docx')
   f = open('Aadhar.docx', 'rb')
   document = Document(f)
