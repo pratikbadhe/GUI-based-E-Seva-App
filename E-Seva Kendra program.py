@@ -2,7 +2,7 @@ from easygui import *
 import sys
 import Tkinter
 import tkMessageBox
-msgbox("Bonjour Monsiuer/Mademosielle")
+msgbox("Hello!")
 while 1:
  a = choicebox("Apply for","E-Seva Kendra",choices=["Passport","Aadhar Card"])
  if a == "Passport":
